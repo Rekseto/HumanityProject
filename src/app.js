@@ -4,7 +4,7 @@
 const express = require('express')
 const path = require('path');
 const favicon = require('serve-favicon');
-const config = require('./configs/config');
+const config = require('./config');
 const mongoose = require('mongoose');
 
 const app = require('./index.js');
