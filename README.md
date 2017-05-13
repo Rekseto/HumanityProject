@@ -1,2 +1,2 @@
 # HumanityProject
-Simple contact list.. 
+Simple contact list written with love in JS!
