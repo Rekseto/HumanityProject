@@ -7,6 +7,7 @@ let friendSchema = new Schema({
     favourite: {type: Boolean, required: true},
 });
 
+
 let Friend = mongoose.model('Friend', friendSchema);
 
 module.exports = Friend;
