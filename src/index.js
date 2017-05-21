@@ -23,11 +23,13 @@ app.use(bodyParser.urlencoded({extended: false}));
 mongoose.connect(config.db_connect);
 
 const friendRoute = require('./routes/api/addFriendRoute');
+const removeFriendRoute = require('./routes/api/removeFriendRoute');
 const getFriendsRoute = require('./routes/api/getFriendsRoute');
 const updateFriendRoute = require('./routes/api/updateFriendRoute');
 const indexRoute = require('./routes/visitor/index');
 
 app.use(friendRoute);
+app.use(removeFriendRoute);
 app.use(getFriendsRoute);
 app.use(updateFriendRoute);
 app.use(indexRoute);

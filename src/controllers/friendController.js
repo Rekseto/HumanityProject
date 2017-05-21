@@ -22,6 +22,9 @@ let friendController = {
     },
     changeFriendGroup : function (_name, _group) {
         return Friend.update( { name: _name}, {group: _group},{ upsert: true, new: true }).exec();
+    },
+    removeFriend : function (_name) {
+        return Friend.find({ name : _name}).remove().exec();
     }
 
 }
