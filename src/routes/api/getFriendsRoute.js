@@ -9,5 +9,17 @@ router.get('/api/getFriends', function(req, res, next) {
 
 });
 
+router.get('/api/getFriend/:name', function (req,res,next) {
+    friendController.findFriend(req.params.name).then(function (result) {
+        console.log(req.params.name);
+        console.log(result)
+        if(result) {
+            return JSON.stringify(result);
+        } else {
+            return false;
+        }
+    });
+})
+
 
 module.exports = router;

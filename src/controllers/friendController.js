@@ -11,6 +11,9 @@ let friendController = {
 
         friendData.save();
     },
+    findFriend : function (_name) {
+      return Friend.find({name : _name}).exec();
+    },
     findAllFriends: function () {
         return Friend.find({}).exec();
     },
